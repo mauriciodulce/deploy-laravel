@@ -24,5 +24,15 @@ RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.d
 RUN apt-get -qq install git-lfs
 RUN git lfs install
 
+# Install Nodejs
+RUN curl --silent --location https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get update
+RUN apt-get install -y --force-yes nodejs
+RUN npm install -g pm2
+RUN npm install -g gulp
+RUN npm install -g yarn
+
+
+
 
 
