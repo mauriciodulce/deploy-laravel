@@ -31,7 +31,7 @@ RUN apt-get install -y --force-yes nodejs
 RUN npm install -g pm2
 RUN npm install -g gulp
 RUN npm install -g yarn
-
+RUN npm install -g semantic-release @semantic-release/gitlab-config
 
 
 # Install PHP
