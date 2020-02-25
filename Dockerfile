@@ -19,3 +19,10 @@ RUN tar -xvjf curl-7.65.3.tar.bz2
 RUN cd curl-7.65.3 && ./configure --with-libssh2=/usr/local && make && make install
 RUN ldconfig
 
+# get and install git lfs
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+RUN apt-get -qq install git-lfs
+RUN git lfs install
+
+
+
