@@ -42,3 +42,8 @@ RUN apt-get install -y --force-yes php7.2-cli php7.2-dev \
 		php7.2-xml php7.2-zip php7.2-bcmath php7.2-soap \
 		php7.2-intl php7.2-readline
 
+# Install Composer Package Manager
+
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+
